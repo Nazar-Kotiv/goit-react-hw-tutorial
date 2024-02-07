@@ -1,33 +1,31 @@
 export const Profile = ({
-  props: {
-    username,
-    tag,
-    location,
-    avatar,
-    stats: { followers, views, likes },
-  },
+  name,
+  tag,
+  location,
+  image,
+  stats: { followers, views, likes },
 }) => {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="User avatar" />
-        <p>{username}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
+    <div className="profile-container">
+      <div className="border-img">
+        <img className="avatar" src={image} alt="User avatar" />
+        <p className="border-img p">{name}</p>
+        <p className="border-img p">@{tag}</p>
+        <p className="border-img p">{location}</p>
       </div>
 
-      <ul>
-        <li>
-          <span>Followers</span>
-          <span>{followers}</span>
+      <ul className="ul-prifile">
+        <li className="li-pofile">
+          <span className="span">Followers</span>
+          <span className="span">{followers}</span>
         </li>
-        <li>
-          <span>Views</span>
-          <span>{views}</span>
+        <li className="li-pofile">
+          <span className="span">Views</span>
+          <span className="span">{views}</span>
         </li>
-        <li>
-          <span>Likes</span>
-          <span>{likes}</span>
+        <li className="li-pofile">
+          <span className="span">Likes</span>
+          <span className="span">{likes}</span>
         </li>
       </ul>
     </div>
